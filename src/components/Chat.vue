@@ -18,7 +18,7 @@ const sendMessage = () => {
 <template>
   <div class="w-full px-5 flex flex-col justify-between">
     <div class="flex flex-col mt-5 overflow-y-auto">
-      <ChatMessage v-for="message in store.currentDialog.chat" :message="message" />
+      <ChatMessage v-for="message in store.currentDialog.chat" :message="message" :key="message.id" />
     </div>
     <div class="py-5 flex gap-1">
       <input
